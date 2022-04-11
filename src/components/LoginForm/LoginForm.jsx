@@ -25,6 +25,7 @@ const LoginForm = () => {
       const from = location.state?.from || '/contacts';
       navigate(from);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLogin]);
 
   const handleChange = ({ target }) => {
