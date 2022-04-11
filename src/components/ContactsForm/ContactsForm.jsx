@@ -1,6 +1,7 @@
 import { useState, memo } from 'react';
 import PropTypes from 'prop-types';
 import { initialState } from './initialState';
+import Button from '@mui/material/Button';
 import styles from './contactsForm.module.css';
 
 const ContactsForm = ({ onSubmit }) => {
@@ -52,9 +53,14 @@ const ContactsForm = ({ onSubmit }) => {
       </div>
       <div className="form-group">
         <label className={styles.label}></label>
-        <button type="submit" className={styles.btn}>
+        <Button
+          variant="contained"
+          color="secondary"
+          size="large"
+          type="submit"
+        >
           Add contact
-        </button>
+        </Button>
       </div>
     </form>
   );

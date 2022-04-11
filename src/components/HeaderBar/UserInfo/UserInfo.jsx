@@ -1,7 +1,7 @@
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import defaultAvatar from './avatar.png';
 import { logout } from 'redux/auth/auth-operations';
-
+import Button from '@mui/material/Button';
 import { getUser } from 'redux/auth/auth-selectors';
 import styles from './userInfo.module.css';
 
@@ -11,7 +11,7 @@ const UserInfo = () => {
   const handleLogout = () => dispatch(logout());
 
   return (
-    <div>
+    <div className={styles.container}>
       <img
         src={defaultAvatar}
         alt="Default Avatar"
@@ -19,14 +19,14 @@ const UserInfo = () => {
         className={styles.avatar}
       />
       <span className={styles.name}>Welcome, {name}</span>
-      <button
+      <Button
         color="secondary"
         variant="outlined"
         type="button"
         onClick={handleLogout}
       >
         Logout
-      </button>
+      </Button>
     </div>
   );
 };
