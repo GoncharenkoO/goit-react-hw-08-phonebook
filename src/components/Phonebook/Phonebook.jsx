@@ -1,15 +1,15 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
-import ContactsForm from '../../components/ContactsForm';
-import ContactsList from '../../components/ContactsList';
+import ContactsForm from '../Phonebook/ContactsForm';
+import ContactsList from '../Phonebook/ContactsList';
 import LoaderComponent from '../../components/Loader/Loader';
-import Filter from '../../components/Filter';
+import Filter from '../Phonebook/Filter';
 import operations from '../../redux/contacts/contacts-operations';
 import {
   getAllContacts,
   getContactsLoading,
 } from '../../redux/contacts/contacts-selectors';
-import { getFilteredContacts } from '../../components/Filter/getFilteredContacts';
+import { getFilteredContacts } from '../Phonebook/Filter/getFilteredContacts';
 
 import styles from './phonebook.module.css';
 
